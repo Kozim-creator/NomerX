@@ -1,0 +1,264 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #100b19;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 16px 12px;
+}
+
+.app {
+  max-width: 480px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e8b74f;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #56327c, #1b1028);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #ffca55;
+}
+
+header h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 4px;
+  color: #9c8bac;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.coin {
+  margin-left: auto;
+  padding: 9px;
+  border: 1px solid #49314f;
+  border-radius: 12px;
+  color: #ffcf61;
+  font-size: 12px;
+}
+
+main {
+  padding: 24px 14px;
+  border: 1px solid #453057;
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 50% 20%, #45235e, transparent 55%),
+    linear-gradient(160deg, #21152f, #130e1c);
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid #79502d;
+  border-radius: 30px;
+  color: #ffcb63;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+main > h2 {
+  margin-top: 20px;
+  font-size: 27px;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #ad9dbb;
+  font-size: 12px;
+}
+
+.plate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 35px auto 18px;
+  padding: 18px 8px;
+  border: 4px solid #d3d3d3;
+  border-radius: 12px;
+  background: linear-gradient(#fff, #ddd);
+  color: #151515;
+  box-shadow: 0 0 35px #d9a34b50;
+}
+
+.plate strong {
+  font-size: clamp(19px, 5.3vw, 29px);
+  letter-spacing: 1px;
+}
+
+.uz {
+  padding: 8px 5px;
+  border-radius: 4px;
+  background: #2465a8;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rarity {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #30213f;
+  color: #e8c17a;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.price-box {
+  margin: 24px 0;
+}
+
+.price-box span {
+  color: #a798b8;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.price-box h2 {
+  margin-top: 9px;
+  color: #ffca55;
+  font-size: 29px;
+}
+
+button {
+  width: 100%;
+  padding: 16px 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.spin {
+  background: linear-gradient(100deg, #ffe18a, #e9a637);
+  color: #24132d;
+  box-shadow: 0 5px 22px #d99d4030;
+}
+
+.sell {
+  margin-top: 10px;
+  border: 1px solid #74518c;
+  background: #30203f;
+  color: #f1d9ff;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 12px;
+  text-align: left;
+}
+
+.history-head h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.history-head span {
+  color: #a897b8;
+  font-size: 10px;
+}
+
+.history {
+  display: grid;
+  gap: 9px;
+}
+
+.empty {
+  padding: 20px 8px;
+  border: 1px dashed #493455;
+  border-radius: 12px;
+  color: #a897b8;
+  font-size: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 9px;
+  border: 1px solid #3a2a49;
+  border-radius: 11px;
+  background: #20172b;
+  text-align: left;
+}
+
+.item strong {
+  font-size: 12px;
+}
+
+.item small {
+  display: block;
+  margin-top: 5px;
+  color: #a897b8;
+  font-size: 10px;
+}
+
+.item .amount {
+  color: #ffca55;
+  font-size: 11px;
+  text-align: right;
+}
+
+footer {
+  padding: 23px 0 8px;
+  color: #83758f;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+footer span {
+  color: #ffca55;
+}
+
+.plate.rolling {
+  animation: roll .12s infinite alternate;
+}
+
+@keyframes roll {
+  from { transform: translateY(-3px); }
+  to { transform: translateY(3px); }
+}
